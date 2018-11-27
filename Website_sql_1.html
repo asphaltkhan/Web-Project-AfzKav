@@ -1,0 +1,192 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Web Portfolio: Afzal Khan</title>
+	<style>
+	body {
+    margin: 0;
+	background-color:lightblue;
+	}
+
+ul {
+	border-radius:15px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+button {
+    background-color: #4c85af;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	border-radius:12px;
+	
+}
+
+li a.active {
+    background-color: #4c85af;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+		
+	</style>
+  </head>
+  <body style="background:url(https://www.lifeofpix.com/wp-content/uploads/2018/05/pf-mc8-ake07993-ake-1600x1867.jpg); background-size: 100%;">
+    <h1 style="color: white; text-align: center; font-family:Courier New; font-size:50px; padding-top:30px;"> Website Portfolio </h1><h1>
+	</h1><h4 style="color: white; text-align: center; font-family:courier; line-height:10px;"> Afzal Khan <br><br> Email:afzalk2002@gmail.com <br><br> Teacher: Mr.Millard <br><br> Period:3 </h4><h4> 
+	<button onclick="myFunction();">Change Background</button>
+
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="Contact.html">Unit 1</a></li>
+  <li><a href="Unit 2.html">Unit 2</a></li>
+  <li><a href="Unit 3.html">Unit 3</a></li>
+  <li><a href="Unit 4.html">Unit 4</a></li>
+  <li><a href="Unit 5.html">Unit 5</a></li>
+  <li><a href="Unit 6.html">Unit 6</a></li>
+  <li><a href="Unit 7.html">Unit 7</a></li>
+  <li><a href="Date_Time.html">Current Info</a></li>
+  </ul>
+
+<div style="margin-left:25%;padding:1px 16px;height:1000px;">
+<img id="myImg" src="https://americantechclub.files.wordpress.com/2015/03/millard.png" alt="This is my AP Computer Science Principle teacher, Mr.Millard" style="width:100%;max-width:300px">
+
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script type="text/javascript">
+	function myFunction(){
+	 document.body.style.background = 'url(https://www.lifeofpix.com/wp-content/uploads/2018/07/DSC_0662-1600x2478.jpg) no-repeat 100%';
+	 }
+	 
+	 var modal = document.getElementById('myModal');
+
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+
+var span = document.getElementsByClassName("close")[0];
+
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+
+  
+</h4>
+</body>
+</html>
